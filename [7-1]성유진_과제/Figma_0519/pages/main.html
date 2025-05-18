@@ -34,7 +34,7 @@
       fetch("../data.json")
         .then((res) => res.json())
         .then((data) => {
-          renderLetters(data); // ✅ 박스 클릭 시 write.html로 이동
+          renderLetters(data); // 박스 클릭 시 write.html로 이동
         })
         .catch((err) => {
           console.error("데이터 불러오기 실패:", err);
