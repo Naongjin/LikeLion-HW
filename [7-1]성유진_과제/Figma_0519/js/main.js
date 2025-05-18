@@ -13,7 +13,7 @@ export function renderLetters(dataList) {
       window.location.href = "read.html";
     });
 
-    // ✅ 각 편지를 별도로 container에 추가
+    //각 편지를 별도로 container에 추가
     letterContainer.appendChild(letter);
   });
 }
