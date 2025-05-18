@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <div id="Container">
+      <div id="Box">
+        <img id="Logo" src="../images/logo.svg" />
+        <div id="Title">🦁DWU LIKELION LETTER🦁</div>
+        <div id="LetterWrapper">
+          <div id="Letter"></div>
+        </div>
+        <div id="PostBox" onclick="location.href='write.html';">
+          <div id="postText">POST</div>
+          <hr />
+          <div id="SendBtn">
+            <img
+              src="../images/heart.svg"
+              id="heart"
+              alt="heart"
+              width="50px"
+            />
+            <div id="goText">편지 보내러 가기</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module">
+      import { renderLetters } from "../js/main.js";
+      fetch("../data.json")
+        .then((res) => res.json())
+        .then((data) => {
+          renderLetters(data); // ✅ 박스 클릭 시 write.html로 이동
+        })
+        .catch((err) => {
+          console.error("데이터 불러오기 실패:", err);
+          document.getElementById("Letter").textContent =
+            "편지를 불러오지 못했습니다.";
+        });
+    </script>
+  </body>
+</html>

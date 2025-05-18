@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="../css/read.css" />
+  </head>
+  <body>
+    <div id="Container">
+      <div id="Box">
+        <div id="BackBtn">
+          <img
+            src="../images/backbtn.svg"
+            alt="back"
+            width="30px"
+            onclick="history.back()"
+          />
+        </div>
+        <div id="Content">
+          <div id="Title"></div>
+          <div id="ContentBox">
+            <div id="Date"></div>
+            <div id="contentText"></div>
+          </div>
+          <button id="DeleteBtn">삭제하기</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      import { renderDatas } from "../js/read.js";
+
+      fetch("../data.json")
+        .then((res) => res.json())
+        .then((data) => {
+          renderDatas(data);
+        })
+        .catch((error) => {
+          console.error("데이터 불러오기 오류:", error);
+          document.getElementById("Content").innerHTML =
+            "<p>데이터를 불러오는 중 오류가 발생했습니다.</p>";
+        });
+    </script>
+  </body>
+</html>

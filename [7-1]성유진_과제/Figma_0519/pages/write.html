@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WRITE</title>
+    <link type="text/css" rel="stylesheet" href="../css/write.css" />
+  </head>
+  <body>
+    <div id="Container">
+      <div id="Box">
+        <div id="BackBtn">
+          <img
+            src="../images/backbtn.svg"
+            alt="back"
+            width="30px"
+            onclick="history.back()"
+          />
+        </div>
+        <div id="Content">
+          <input placeholder="제목을 입력해 주세요" id="Title" />
+          <div id="ContentBox">
+            <div id="Date"></div>
+            <textarea id="letterContent" placeholder="내용 입력"></textarea>
+          </div>
+          <button id="WriteBtn">작성하기</button>
+        </div>
+      </div>
+    </div>
+    <script src="../js/write.js"></script>
+    </script>
+  </body>
+</html>
