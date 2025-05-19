@@ -10,7 +10,7 @@ export function renderLetters(dataList) {
     letter.className = "letter-box";
     // 클릭 시 write.html 이동
     letter.addEventListener("click", () => {
-      window.location.href = "read.html";
+      window.location.href = `read.html?id=${letter.postId}`;
     });
 
     //각 편지를 별도로 container에 추가
