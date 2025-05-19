@@ -8,8 +8,6 @@ window.addEventListener("DOMContentLoaded", () => {
     "." +
     String(today.getDate()).padStart(2, "0");
   dateElement.textContent = formattedDate;
-
-  console.log("날짜:", formattedDate);
 });
 
 document.getElementById("WriteBtn").addEventListener("click", () => {
@@ -18,6 +16,6 @@ document.getElementById("WriteBtn").addEventListener("click", () => {
   const date = document.getElementById("Date").textContent;
 
   console.log("제목:", title);
-  console.log("내용:", content);
   console.log("날짜:", date);
+  console.log("내용:", content);
 });
