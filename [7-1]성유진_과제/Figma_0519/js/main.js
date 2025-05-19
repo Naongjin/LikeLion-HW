@@ -8,7 +8,7 @@ export function renderLetters(dataList) {
     const letter = document.createElement("div");
     letter.innerText = e.title; // 텍스트 설정 (각 편지 제목)
     letter.className = "letter-box";
-    // 클릭 시 write.html 이동
+    // 클릭 시 read.html 이동
     letter.addEventListener("click", () => {
       window.location.href = `read.html?id=${letter.postId}`;
     });
