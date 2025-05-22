@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>READ</title>
-    <link type="text/css" rel="stylesheet" href="../css/read.css" />
+    <title>WRITE</title>
+    <link type="text/css" rel="stylesheet" href="../css/write.css" />
   </head>
   <body>
     <div id="Container">
@@ -18,15 +18,16 @@
           />
         </div>
         <div id="Content">
-          <div id="Title"></div>
+          <input placeholder="제목을 입력해 주세요" id="Title" />
           <div id="ContentBox">
             <div id="Date"></div>
-            <div id="contentText"></div>
+            <textarea id="letterContent" placeholder="내용 입력"></textarea>
           </div>
-          <div id="DeleteBtn">삭제하기</div>
+          <button id="WriteBtn">작성하기</button>
         </div>
       </div>
     </div>
-    <script src="../js/read.js"></script>
+    <script src="../js/write.js"></script>
+    </script>
   </body>
 </html>
